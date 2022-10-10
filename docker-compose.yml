@@ -1,0 +1,17 @@
+version: "3.9" # optional since v1.27.0
+services:
+  django_app:
+    image: msft-learn-how-to-devops-django-app:latest
+    container_name: msft-learn-how-to-devops-django-app
+    restart: always
+    ports:
+      - 8000:8000 # because of nginx
+      # Long Polling
+      # https://www.oreilly.com/library/view/odoo-11-development/9781788477796/d3036256-f3fd-43c1-851f-ac7ef68f379b.xhtml
+      - "8072:8072" 
+    volumes:
+      - django-web-data:/var/lib/django
+
+volumes:
+  # logvolume01: {}
+  django-web-data:
