@@ -1,8 +1,8 @@
 version: "3.9" # optional since v1.27.0
 services:
   django_app:
-    image: msft-learn-django-app:latest
-    container_name: msft-learn-django-app
+    image: msft-learn-how-to-devops-django-app:latest
+    container_name: msft-learn-how-to-devops-django-app
     restart: always
     ports:
       - 8000:8000 # because of nginx
