@@ -36,7 +36,15 @@ RUN python3 -m pip install --upgrade pip
 RUN python3 -m pip install -r requirements.txt
 
 # copy sources
-COPY . .
+
+# main project
+# COPY . .
+
+# starter
+COPY ./mslearn-django-models-data/starter .
+
+# solution
+# COPY ./mslearn-django-models-data/solution .
 
 # expose app port
 EXPOSE 8000
