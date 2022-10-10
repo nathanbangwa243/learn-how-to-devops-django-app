@@ -1,0 +1,28 @@
+# base image
+FROM python:3.9
+
+# update packages
+RUN apt-get update \
+	&& apt-get install apt-utils
+    
+RUN apt-get install -y --no-install-recommends \
+		postgresql-client \
+	&& rm -rf /var/lib/apt/lists/*
+
+# define the work directory
+WORKDIR /usr/src/app
+
+# install requirements
+COPY requirements.txt ./
+
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+
+# copy sources
+COPY . .
+
+# expose app port
+EXPOSE 8000
+
+# entry point
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
