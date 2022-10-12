@@ -40,8 +40,8 @@ RUN python3 -m pip install -r requirements.txt
 # main project
 # COPY . .
 
-# starter
-COPY ./mslearn-django-models-data/starter .
+# starter on root
+COPY . .
 
 # solution
 # COPY ./mslearn-django-models-data/solution .
