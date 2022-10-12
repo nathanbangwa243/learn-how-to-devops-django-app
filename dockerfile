@@ -55,3 +55,6 @@ EXPOSE 8000
 
 # entry point
 CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+
+# run
+# docker build -t msft-learn-how-to-devops-django-app .
