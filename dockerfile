@@ -33,6 +33,10 @@ RUN . venv/bin/activate
 COPY requirements.txt ./
 
 RUN python3 -m pip install --upgrade pip
+
+# remove pkg_resources 0.0.0
+RUN sed -i 's/pkg_resources==0.0.0//g' requirements.txt
+
 RUN python3 -m pip install -r requirements.txt
 
 # copy sources
