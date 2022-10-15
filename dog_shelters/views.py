@@ -21,3 +21,8 @@ class DogDetailView(generic.DetailView):
     model = models.Dog
     template_name = 'dog_detail.html'
     context_object_name = 'dog'
+
+class DogCreateView(generic.CreateView):
+    model = models.Dog
+    template_name = 'dog_form.html'
+    fields = ['shelter', 'name', 'description']
