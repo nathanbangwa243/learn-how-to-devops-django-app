@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 INSTALLED_APPS = [
     #[TODO] - Add the app to the list of INSTALLED_APPS
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dog_shelters.apps.DogSheltersConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
