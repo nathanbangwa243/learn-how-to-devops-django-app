@@ -11,6 +11,7 @@ services:
       - "8072:8072" 
     volumes:
       - django-web-data:/var/lib/django
+      # - ./:/usr/src/app # online update container
 
 volumes:
   # logvolume01: {}
